@@ -1,18 +1,19 @@
 package day01;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Concert {
 
-    List<Person> personList = new ArrayList<>();
+    private List<Person> people = new ArrayList<>();
 
-    public boolean addPerson(Person newPerson, LocalDate date){
-        if this.date<date {personList.add(NewPerson);} else
-        {throw new IllegalArgumentException("Not allowed person.");
-        return false;}
-        return true;
-    };
+    public void addPerson(Person person, LocalTime actualTime){
+        if (actualTime.isBefore(person.getTicket().entryTime())) {
+            throw new IllegalArgumentException("Cant get in") ;} else {
+                people.add(person);
+        }
+    }
 
 }
