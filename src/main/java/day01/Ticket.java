@@ -25,6 +25,10 @@ public class Ticket {
         this.price = price;
     }
 
+    public LocalTime entryTime(){
+        return startTime.toLocalTime().minusHours(1);
+    }
+
     public String getBand() {
         return band;
     }
