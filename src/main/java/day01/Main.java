@@ -12,9 +12,9 @@ public class Main {
 
     Concert concert = new Concert();
 
-    concert.addPerson(person, LocalTime.of(15,40));
+    concert.addPerson(person, LocalTime.of(15,30));
         System.out.println("OK");
-    concert.addPerson(person2, LocalTime.of(11,40));
+    concert.addPerson(person2, LocalTime.of(15,30));
 
 
 
