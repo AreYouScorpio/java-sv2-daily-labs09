@@ -1,23 +1,40 @@
 package day01;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Ticket {
-    String name;
-    LocalDate date;
-    int price;
+    private String band;
+    private LocalDateTime startTime;
+    private int price;
 
-    public Ticket(String name, LocalDate date, int price) {
-        this.name = name;
-        this.date = date;
+    /*
+    public Ticket(){
+        super();
+    }
+
+   automatikus Object-re
+    */
+
+
+    public Ticket(String band, LocalDateTime startTime, int price) {
+        // super(); - ez automatikusan az Object-re megtörténik, nem kell leírni
+        this.band = band;
+        this.startTime = startTime;
         this.price = price;
     }
 
-    public int LocalTime entryTime(LocalDate date){
-        LocalTime.of(date.atTime());
-
+    public String getBand() {
+        return band;
     }
 
+    public LocalDate getStartTime() {
+        return startTime;
+    }
+
+    public int getPrice() {
+        return price;
+    }
 }
 
