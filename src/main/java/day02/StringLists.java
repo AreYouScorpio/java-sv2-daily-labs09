@@ -5,12 +5,12 @@ import java.util.List;
 
 public class StringLists {
 
-
     public List<String> shortestWords(List<String> words){
         int max=1000;
         List<String> result = new ArrayList<>();
         for (String actual : words) {
             if (actual.length()<max) {max=actual.length();}
+            result.clear();
         }
         for (String actual : words) {
             if (actual.length()==max) result.add(actual);}
