@@ -2,6 +2,7 @@ package day02;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class StringLists {
 
@@ -14,15 +15,20 @@ public class StringLists {
         }
         for (String actual : words) {
             if (actual.length()==max) result.add(actual);}
+
         return result;
 
 
-        /*
+
+
+    }
+/*
     public static void main(String[] args) {
         StringLists stringLists = new StringLists();
         stringLists.shortestWords(List.of("aaa","aa","bb","cccc","dd"));
+    Random random = new Random();
+        System.out.println(random.nextInt(4,8));
     }
-*/
-
-    }}
+    */
+}
 
