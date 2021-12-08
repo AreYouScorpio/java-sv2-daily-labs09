@@ -5,7 +5,6 @@ import java.util.List;
 public class StringLists {
 
     public void shortestWords(List<String> words){
-        StringBuilder sb = new StringBuilder();
         int max=1000;
         for (String actual : words) {
             if (actual.length()<max) {max=actual.length();}
