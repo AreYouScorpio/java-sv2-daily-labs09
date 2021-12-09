@@ -24,8 +24,12 @@ public class Ceasar extends Encryption{
 
 
     public static void main(String[] args) {
-        Encryption encryption = new Ceasar(3);
+        Encryption encryption = new Ceasar(13);
         encrypts("def", 3);
+
+        // check line: 24 betű .. 2x12 miatt..
+        String s = encryption.encrypts(encryption.encrypts("APPLE"));
+        System.out.println(s);
 
 
     }
