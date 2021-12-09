@@ -2,9 +2,11 @@ package day03;
 
 import java.util.Locale;
 
-public  class Encryption {
+public abstract class Encryption {
 
-    public String encrypts(String input, int offset){
+    public abstract String encrypts(String input);
+
+    public static String encrypts(String input, int offset){
         String result;
         StringBuilder sb = new StringBuilder();
         char[] chars = input.toUpperCase().toCharArray();

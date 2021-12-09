@@ -1,10 +1,33 @@
 package day03;
 
-public class Ceasar{
+public class Ceasar extends Encryption{
+
+    private int offset;
+
+    public Ceasar(int offset) {
+        this.offset = offset;
+    }
+
+    @Override
+    public String encrypts(String input) {
+        StringBuilder sb = new StringBuilder();
+        char[] chars = input.toUpperCase().toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            chars[i] += offset;
+            if (chars[i]>'Z') chars[i] -= 'Z'-'A'+1;
+            sb= sb.append(Character.toString(chars[i]));
+        }
+        System.out.println(sb);
+        return sb.toString();
+    }
+
+
 
     public static void main(String[] args) {
-        Encryption encryption = new Encryption();
-        encryption.encrypts("abc",  3);
+        Encryption encryption = new Ceasar(3);
+        encrypts("def", 3);
+
+
     }
 
 }
